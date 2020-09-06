@@ -1,0 +1,44 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <ion-row>
+      <ion-col col-auto>
+        <img style="width: 40px" src="assets/icon/logo.png">
+      </ion-col>
+      <ion-col>
+        <ion-title>WebMedical</ion-title>
+      </ion-col>
+    </ion-row>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+  <ion-tabs>
+    <ion-tab-bar slot="top">
+      <ion-tab-button tab="home">
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Accueil</ion-label>
+        <ion-badge>6</ion-badge>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="profile">
+        <ion-icon name="person-circle"></ion-icon>
+        <ion-label>Profile</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="notification">
+        <ion-icon name="map"></ion-icon>
+        <ion-label>Notification</ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="menu">
+        <ion-icon name="information-circle"></ion-icon>
+        <ion-label>Menu</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+  </ion-row>
+  <app-home></app-home>
+
+</ion-content>

@@ -1,0 +1,65 @@
+<ion-content parallax-header no-bounce class="bg-modal">
+  <ion-row>
+    
+    <ion-button tab="home">
+      <ion-icon name="calendar"></ion-icon>
+      <ion-label>Accueil</ion-label>
+      <ion-badge>6</ion-badge>
+    </ion-button>
+
+    <ion-button tab="profile">
+      <ion-icon name="person-circle"></ion-icon>
+      <ion-label>Profile</ion-label>
+    </ion-button>
+
+    <ion-button tab="notification">
+      <ion-icon name="map"></ion-icon>
+      <ion-label>Notification</ion-label>
+    </ion-button>
+
+    <ion-button tab="menu">
+      <ion-icon name="information-circle"></ion-icon>
+      <ion-label>Menu</ion-label>
+    </ion-button>
+</ion-row
+  <div class="header-image" [ngStyle]="{'background-image': 'url(' + +')'}">
+
+  </div>
+  <div class="main-content" text-wrap text-center>
+    <div class="circular" [ngStyle]="{'background-image': 'url(' +  +')'}"></div>
+    <h2>{{user.nom}} {{user.prenom}}</h2>
+    <p> &bull; {{user.email}}</p>
+    <!--<p class="profile-description">{{user.description}}</p>-->
+
+
+    <ion-list>
+      <ion-list-header>
+        Paramètres
+      </ion-list-header>
+      <button ion-item (click)="compte()" >
+        <ion-icon [name]="md-contact" item-start color="primary"></ion-icon>
+        <ion-label text-wrap color="dark_light">Mon compte</ion-label>
+        <ion-icon item-end name="ios-arrow-forward-outline" color="dark_light"></ion-icon>
+      </button>
+      <button ion-item >
+        <ion-icon [name]="md-document" item-start color="primary"></ion-icon>
+        <ion-label text-wrap color="dark_light">Langue</ion-label>
+        <ion-icon item-end name="ios-arrow-forward-outline" color="dark_light"></ion-icon>
+      </button>
+      <button ion-item >
+        <ion-icon [name]="md-contact" item-start color="primary"></ion-icon>
+        <ion-label text-wrap color="dark_light">Supprimer compte</ion-label>
+        <ion-icon item-end name="ios-arrow-forward-outline" color="dark_light"></ion-icon>
+      </button>
+      <button ion-item (click)="authService.logoutUser()">
+        <ion-icon [name]="md-log-out" item-start color="primary"></ion-icon>
+        <ion-label text-wrap color="dark_light">Déconnecter</ion-label>
+        <ion-icon item-end name="ios-arrow-forward-outline" color="dark_light"></ion-icon>
+      </button>
+    </ion-list>
+
+
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,44 @@
+<!-- home.page.html -->
+<ion-header [translucent]="true">
+
+  <ion-toolbar color="warning">
+    <ion-button  shape="round" color="dark">
+      <ion-icon slot="start" name="locate"></ion-icon>
+    </ion-button>
+    <ion-title slot="end"></ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-row>
+  <ion-col (click)="sp()">{{ specialite}}</ion-col><span class="vLine"></span>
+  <ion-col (click)="country()">{{ville}}</ion-col><span class="vLine"></span>
+  <ion-col (click)="currentPlace()"><i class="fas fa-map-marked-alt"></i></ion-col>
+</ion-row>
+<div class="line"></div>
+<ion-row>
+  <ion-card *ngFor="let medecin of medecins">
+    <ion-item (click)="profile(medecin)">
+      <ion-avatar slot="start">
+        <img src="../../../assets/user.png">
+      </ion-avatar>
+      <ion-label>
+        <h3>Dr {{medecin.nom }}</h3>
+        <p>{{medecin.specialite }}</p>
+      </ion-label>
+    </ion-item>
+    <ion-footer>
+      <ion-row>
+        <ion-col center text-center>
+          <button (click)="addrdv(medecin.uid)" class="btn">
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>Prendre rendez-vous</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-footer>
+  </ion-card>
+</ion-row>
+
+</ion-content>

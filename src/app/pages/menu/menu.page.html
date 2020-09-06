@@ -1,0 +1,32 @@
+<ion-content>
+  <ion-row>
+    
+    <ion-button tab="home">
+      <ion-icon name="calendar"></ion-icon>
+      <ion-label>Accueil</ion-label>
+      <ion-badge>6</ion-badge>
+    </ion-button>
+
+    <ion-button tab="profile">
+      <ion-icon name="person-circle"></ion-icon>
+      <ion-label>Profile</ion-label>
+    </ion-button>
+
+    <ion-button tab="notification">
+      <ion-icon name="map"></ion-icon>
+      <ion-label>Notification</ion-label>
+    </ion-button>
+
+    <ion-button tab="menu">
+      <ion-icon name="information-circle"></ion-icon>
+      <ion-label>Menu</ion-label>
+    </ion-button>
+</ion-row
+  <ion-list>
+    <ion-item *ngFor="let menu of menus">
+      <ion-icon [name]="menu.icon" item-start color="primary"></ion-icon>
+      <ion-label text-wrap color="dark_light">{{menu.text}}</ion-label>
+      <ion-icon *ngIf="menu.forwardIcon" item-end name="ios-arrow-forward-outline" color="dark_light"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

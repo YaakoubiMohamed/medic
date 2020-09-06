@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>add-rdv</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+			<img class="img-circle border-effect1" src="../../../assets/imgs/logo.png" alt=" " />
+						
+						<h3>{{medecin.nom}} {{medecin.prenom}}</h3>
+						<span>{{medecin.telephone}}</span>
+						<p>{{medecin.specialite}}</p>
+					
+					<div class="google-map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d130575973.84343986!2d177.81913316568418!3d2.8560417748882556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sin!4v1458889467193"  frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+					<div class="contact">
+						<h2>contact</h2>
+						<form>
+							<input type="text" placeholder="Name" required="">
+							<input type="text" class="mail" placeholder="Email" required="">
+							<input type="text" placeholder="Phone" required="">
+							<textarea placeholder="Message"></textarea>
+							<input type="submit" value="send">
+						</form>
+					</div>
+				
+</ion-content>  

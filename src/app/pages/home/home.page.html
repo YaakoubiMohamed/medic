@@ -1,0 +1,119 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <ion-row>
+      <ion-col col-auto>
+        <img style="width: 40px" src="assets/icon/logo.png">
+      </ion-col>
+      <ion-col>
+        <ion-title>WebMedical</ion-title>
+      </ion-col>
+    </ion-row>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="main">
+<ion-row>
+<ion-card class="card-service">
+  <ion-row>
+    
+        <ion-button tab="home">
+          <ion-icon name="calendar"></ion-icon>
+          <ion-label>Accueil</ion-label>
+          <ion-badge>6</ion-badge>
+        </ion-button>
+    
+        <ion-button tab="profile">
+          <ion-icon name="person-circle"></ion-icon>
+          <ion-label>Profile</ion-label>
+        </ion-button>
+    
+        <ion-button tab="notification">
+          <ion-icon name="map"></ion-icon>
+          <ion-label>Notification</ion-label>
+        </ion-button>
+    
+        <ion-button tab="menu">
+          <ion-icon name="information-circle"></ion-icon>
+          <ion-label>Menu</ion-label>
+        </ion-button>
+    </ion-row>
+  <ion-row>
+    <ion-label text-center class="lbl-title">Services de santé</ion-label>
+  </ion-row>
+
+  <ion-row>
+    <ion-col text-center  col-4>
+      <button ion-button clear large class="btn-service" no-padding (click)="medecin()" >
+        <div>
+          <img class="img-service" src="assets/icon/doctor_speak.svg">
+          <ion-label class="lbl-service">Médecins</ion-label>
+        </div>
+      </button>
+    </ion-col>
+    <ion-col text-center  col-4>
+      <button ion-button clear large class="btn-service" no-padding >
+        <div>
+          <img class="img-service" src="assets/icon/images.png">
+          <ion-label class="lbl-service">Pharmacies</ion-label>
+        </div>
+      </button>
+    </ion-col>
+    <ion-col text-center  col-4>
+      <button ion-button clear large class="btn-service" no-padding (click)="labo()">
+        <div>
+          <img class="img-service" src="assets/icon/lab_test.svg">
+          <ion-label class="lbl-service">Laboratoires</ion-label>
+        </div>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-card>
+</ion-row>
+<ion-row>
+<ion-card class="card-service">
+
+  <ion-row>
+    <ion-label text-center class="lbl-title">Information sur la santé</ion-label>
+  </ion-row>
+
+  <ion-row>
+    <ion-col text-center  col-4 (click)="cons()">
+      <button ion-button clear large class="btn-service" no-padding >
+        <div>
+          <img class="img-service" src="../../assets/icon/health_360.svg">
+          <ion-label class="lbl-service">Mes Consultation</ion-label>
+        </div>
+      </button>
+    </ion-col>
+    <ion-col text-center  col-4 (click)="rdv()">
+      <button ion-button clear large class="btn-service" no-padding >
+        <div>
+          <img class="img-service" src="../../assets/icon/health_360.svg">
+          <ion-label class="lbl-service">Mes Rendez-vous</ion-label>
+        </div>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-card>
+</ion-row>
+
+
+  <ion-row>
+    <ion-label text-center class="lbl-title">Magazine & Actualités</ion-label>
+  </ion-row>
+
+  <ion-row>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <h1>Slide 1</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 2</h1>
+      </ion-slide>
+      <ion-slide>
+        <h1>Slide 3</h1>
+      </ion-slide>
+    </ion-slides>
+</ion-row>
+</ion-content>

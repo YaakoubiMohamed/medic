@@ -1,0 +1,9 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>horaire</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<span class="ho" *ngFor="let hour of horaires" (click)="addrdv(hour.heure)">{{hour.heure}}</span>
+</ion-content>

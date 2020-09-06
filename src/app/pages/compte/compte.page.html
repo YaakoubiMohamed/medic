@@ -1,0 +1,54 @@
+<!-- Default back button -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="goBack()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+{{user.nom}}
+{{user.prenom}}
+<p>{{user.email}}</p>
+  matricule 24028987
+<h2>donnees personnelles</h2>
+<form [formGroup]= "compteForm" (ngSubmit)="formSubmit()">
+<ion-list>
+  <ion-item>
+    <label>numero de telephone </label>
+    <ion-input formControlName="telephone" placeholder="Tapez ici pour ajouter des notes"></ion-input>
+  </ion-item>
+  <ion-item>
+    <label>date de naissance</label>
+    <ion-datetime displayFormat="MMM DD, YYYY HH:mm" formControlName="date"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <label>Governorat</label>
+    <ion-select formControlName="ville" value="personnel" okText="Okay" cancelText="Dismiss">
+      <ion-select-option value="personnel">Personnel</ion-select-option>
+      <ion-select-option value="shopping">Shopping</ion-select-option>
+      <ion-select-option value="travail">Travail</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <label>Adresse</label>
+    <ion-input formControlName="adresse" placeholder="Tapez ici pour ajouter des notes"></ion-input>
+  </ion-item>
+</ion-list>
+<h2>parametres </h2>
+<ion-list>
+  <ion-item>
+    Pays {{user.ville}}
+  </ion-item>
+  <ion-item>
+    Langue France
+  </ion-item>
+  <ion-item>
+    Version 1.0
+  </ion-item>
+</ion-list>
+<ion-button type="submit" color="primary" shape="full" expand="block">Modifier</ion-button>
+
+</form>
+</ion-content>

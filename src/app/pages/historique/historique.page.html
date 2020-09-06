@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>historique</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <!-- list with animation on iteration  -->
+    <ion-list>
+      <!-- @itemState for animation  -->
+      <ion-item *ngFor="let rdv of rdvs" >
+        <ion-avatar slot="start">
+          {{rdv.StartTime}}
+        </ion-avatar>
+        <ion-row  *ngFor="let medecin of medecins">
+          <ion-label *ngIf="medecin.uid == rdv.medecin" (click)="info(medecin,rdv.StartTime);">
+            <h2 >{{ medecin.nom }} {{ medecin.prenom }}</h2>
+            <p>{{ medecin.specialite }} </p>
+          </ion-label>
+        </ion-row>
+      </ion-item>
+    </ion-list>
+
+  </ion-row>
+</ion-content>

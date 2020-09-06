@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>specialite</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <button ion-button clear large class="btn-service" no-padding  *ngFor="let item of listItems">
+    <div (click)="specialite(item.nom)">
+      <img class="img-service" src="{{ item.image }}">
+      <ion-label class="lbl-service">{{ item.nom }}</ion-label>
+    </div>
+  </button>
+</ion-content>

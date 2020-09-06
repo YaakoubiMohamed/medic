@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>labos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-searchbar placeholder="Filter Schedules" [(ngModel)]="searchTerm" animated="true"></ion-searchbar>
+    <ion-searchbar placeholder="Filter Schedules" [(ngModel)]="ville" animated="true"></ion-searchbar> 
+  </ion-row>
+  <div class="line"></div>
+  <ion-row>
+    <ion-card *ngFor="let labo of agents |filter:searchTerm |  filter : ville ">
+      <ion-item (click)="profile(labo)">
+        <ion-avatar slot="start">
+          <img src="../../../assets/user.png">
+        </ion-avatar>
+        <ion-label>
+          <h3>Dr {{labo.nom }}</h3>
+          <p>{{labo.type }}</p>
+          <p>{{labo.ville }}</p>
+        </ion-label>
+      </ion-item>
+      <ion-footer>
+        <ion-row>
+          <ion-col center text-center>
+            <button (click)="fiche(labo.uid)" class="btn">
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>Voir fiche</div>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-footer>
+    </ion-card>
+  </ion-row>
+  
+  </ion-content>

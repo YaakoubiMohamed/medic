@@ -1,0 +1,49 @@
+<ion-content>
+<ion-grid padding>
+
+
+    <ion-row class="row-img" margin-top><img class="top-icon" src="assets/icon/logo.png"></ion-row>
+    <ion-row class="row-title" margin-bottom><h2 class="top-title">{{'Connecter avec WebMedical'}}</h2>
+    </ion-row>
+
+
+    <ion-row class="row-form">
+
+
+      <form [formGroup]="form" (ngSubmit)="loginUser(form.value)" class="form-login">
+        <ion-row>
+          <ion-col >
+            <ion-item>
+              <ion-label color="primary" position="floating">Email</ion-label>
+              <ion-input formControlName="email" autocorrect="on" autofocus="on" clearInput="true" clearOnEdit="true" color="primary" inputmode="text" placeholder="Enter your email" required="true"></ion-input>
+              <ion-icon name="mail" color="primary" slot="end"></ion-icon>
+            </ion-item>
+            
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col >
+            <ion-item>
+              <ion-label color="primary" position="floating">Password</ion-label>
+              <ion-input type="password" formControlName="password" class="form-controll" placeholder="tapez votre password" required></ion-input>
+              <ion-icon name="lock" color="primary" slot="end"></ion-icon>
+            </ion-item>
+            
+          </ion-col>
+        </ion-row>
+    
+        <ion-row>
+          <ion-col>
+            <ion-button  class="submit-btn" type="submit"  [disabled]="!form.valid">Log In</ion-button>
+            <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
+          </ion-col>
+        </ion-row>
+      </form>
+
+
+    </ion-row> 
+  </ion-grid>
+
+
+</ion-content>
